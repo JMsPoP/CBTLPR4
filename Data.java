@@ -47,9 +47,9 @@ public class Data {
     }
 
     public Data(int d, int m, int a) {
-        this.dia = d;
-        this.mes = m;
-        this.ano = a;
+        entraDia(d);
+        entraMes(m);
+        entraAno(a);
     }
 
     public void entraDia() {
@@ -68,6 +68,10 @@ public class Data {
         }
     }
 
+    public void entraDia(int d){
+        this.dia = d;
+    }
+
     public void entraMes() {
         while (true) {
             try {
@@ -84,6 +88,11 @@ public class Data {
         }
     }
 
+    public void entraMes(int m){
+        this.mes = m;
+    }
+
+
     public void entraAno() {
         while (true) {
             try {
@@ -98,6 +107,10 @@ public class Data {
                 System.out.println("Erro: " + e.getMessage());
             }
         }
+    }
+
+    public void entraAno(int a){
+        this.ano = a;
     }
 
     public int retDia() {
